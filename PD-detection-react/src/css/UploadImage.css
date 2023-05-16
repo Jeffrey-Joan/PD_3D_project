@@ -1,0 +1,130 @@
+
+body{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+.title{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+.uploadImage{
+    width: 100%;
+    /* height: 80vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 2rem;
+}
+
+.uploadImageForm{
+    width: 25rem;
+    margin-top: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem 3.5rem;
+    z-index: 20;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.3);
+    
+}
+
+.uploadImageForm h1{
+    font-size: 1.5rem;
+}
+
+.uploadBox{
+    height: 20rem;
+    border-style: dashed;
+    border-color: #b2b2b2;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .uploadBox img{
+    background:linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+} */
+
+.uploadBox p{
+    font-size: 1rem;
+}
+
+.uploadedBox{
+    height: 20rem;
+    border-style: dashed;
+    border-color: #b2b2b2;
+    border-radius: .5rem;
+}
+
+.imagename{
+    font-size: 1rem;
+}
+
+
+.uploadedBox img{
+    width: 100%;
+    height: 100%;
+}
+
+
+[type="file"]{
+    background-color: wheat;
+    cursor:pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding: .5rem 2rem;
+    width: 85%;
+    text-align: center;
+    
+}
+
+.buttons{
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+    color: white;
+    padding: .5rem 2rem;
+    font-size: 1rem;
+}
+
+
+
+/* media query  */
+
+
+@media(max-width:560px){
+
+    .title h1{
+        font-size: 1.5rem;
+    }
+
+    .uploadBox p{
+        font-size: 1rem;
+    }
+
+    .uploadImageForm{
+        width: 62.5%;
+        
+    }
+
+    .buttons{
+        width: 100%;
+    }
+
+    .choosefilebutton{
+        width: 70%;
+    }
+
+}
