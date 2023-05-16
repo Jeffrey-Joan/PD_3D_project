@@ -4,7 +4,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.files.storage import default_storage
 import json
 from pathlib import Path
-from PIL import Image
 import os
 import numpy as np
 from keras.models import load_model
@@ -40,7 +39,7 @@ def getImage(request):
     file_name = default_storage.save(data.name.replace(" ",""), data)
     # file_name = file_name.replace(" ","")
     file_url = default_storage.url(file_name)
-    imagePath =  'D:/Mini Project/brain-tumour-detection-django'+file_url
+    imagePath =  'Downloads/PD_3D_project/PD-detection-django'+file_url
     #vector =  cv2.imread(imagePath)
     resizedVector = resize_data((nib.load(imagePath).get_fdata()))
     print(resizedVector.shape)
@@ -49,7 +48,7 @@ def getImage(request):
     # resizedNumpyVector = resizedNumpyVector/255
     resizedNumpyVector = resizedNumpyVector.reshape(1,144,144,96,1)
     
-    brainTumourClassifier = load_model(r'Downloads\three_d_image_classification.h5')
+    brainTumourClassifier = load_model(r'Downloads\PD_3D_project\PD-detection-django\pd_detection\three_d_image_classification.h5')
     result = brainTumourClassifier.predict(resizedNumpyVector)
     print(result)
     newResult = np.argmax(result)
